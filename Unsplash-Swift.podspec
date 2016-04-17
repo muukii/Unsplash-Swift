@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "Unsplash"
+  s.name             = "Unsplash-Swift"
   s.version          = "0.5.0"
   s.summary          = "Unsplash API"
 
