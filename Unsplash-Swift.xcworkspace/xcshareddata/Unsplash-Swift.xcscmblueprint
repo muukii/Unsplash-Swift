@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6FC19EFAEA61E1400DF7899E9BD18D6F2F98B340",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6FC19EFAEA61E1400DF7899E9BD18D6F2F98B340" : 0,
+    "DDDE3C06D0BDDFFCC631D8AD2137228414CC6495" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DF6212F5-4AA6-4CFC-9D2C-5AFB33F98E37",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6FC19EFAEA61E1400DF7899E9BD18D6F2F98B340" : "Unsplash-Swift\/",
+    "DDDE3C06D0BDDFFCC631D8AD2137228414CC6495" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Unsplash-Swift",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Unsplash-Swift.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:muukii\/Unsplash-Swift",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6FC19EFAEA61E1400DF7899E9BD18D6F2F98B340"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:muukii\/WallClock.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DDDE3C06D0BDDFFCC631D8AD2137228414CC6495"
+    }
+  ]
+}
