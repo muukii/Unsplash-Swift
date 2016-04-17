@@ -16,8 +16,7 @@ schemes:
 
 ## PATHS ##
 paths:
-
-  /me:
+  /Users:
     get:
       description: |
         Get the user’s profile
@@ -36,49 +35,49 @@ paths:
         -
           name: username
           type: string
-          in: body
+          in: query
           required: false
           description: username
         -
           name: first_name
           type: string
-          in: body
+          in: query
           required: false
           description: FirstName
         -
           name: last_name
           type: string
-          in: body
+          in: query
           required: false
           description: LastName
         -
           name: email
           type: string
-          in: body
+          in: query
           required: false
           description: Email
         -
           name: url
           type: string
-          in: body
+          in: query
           required: false
           description: Portfolio/personal URL.
         -
           name: location
           type: string
-          in: body
+          in: query
           required: false
           description: Location
         -
           name: bio
           type: string
-          in: body
+          in: query
           required: true
           description: About/bio .
         -
           name: instagram_username
           type: string
-          in: body
+          in: query
           required: false
           description: Instagram username.
       responses:
@@ -96,7 +95,7 @@ paths:
         -
           name: username
           type: string
-          in: query
+          in: path
           required: true
           description: The user’s username. Required.
         -
@@ -126,7 +125,7 @@ paths:
         -
           name: username
           type: string
-          in: query
+          in: path
           required: true
           description: The user’s username. Required.
         -
@@ -167,7 +166,7 @@ paths:
         -
           name: username
           type: string
-          in: query
+          in: path
           required: true
           description: The user’s username. Required.
         -
@@ -208,7 +207,7 @@ paths:
         -
           name: username
           type: string
-          in: query
+          in: path
           required: true
           description: The user’s username. Required.
         -
@@ -334,7 +333,7 @@ paths:
 definitions:
   Me:
     type: object
-    propaties:
+    properties:
       username:
         type: string
       first_name:
@@ -416,13 +415,13 @@ definitions:
 
   Collections:
     type: object
-    propaties:
+    properties:
       id:
         type: integer
       title:
         type: string
       published_at:
-        type: date
+        type: string
       curated:
         type: boolean
       cover_photo:
@@ -434,7 +433,7 @@ definitions:
 
   Users:
     type: object
-    propaties:
+    properties:
       username:
         type: string
       first_name:

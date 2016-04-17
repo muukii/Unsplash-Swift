@@ -1,0 +1,6 @@
+framework module RESTRequest {
+  umbrella header "RESTRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}

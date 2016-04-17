@@ -1,0 +1,6 @@
+framework module BrickRequest {
+  umbrella header "BrickRequest-umbrella.h"
+
+  export *
+  module * { export * }
+}

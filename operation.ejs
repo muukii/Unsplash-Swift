@@ -1,0 +1,109 @@
+//
+//  <%= name + ".swift" %>
+//
+//  Created by SwaggerGen
+//
+
+import Foundation
+import Alamofire
+import BrickRequest
+import SwiftyJSON
+import RxSwift
+import RESTRequest
+
+public struct <%= name + httpMethod %>: <%= getMethodProtocol(httpMethod) %>, ManagerRequestType, JSONResponseType {
+
+<%  allParams.forEach((p) => { -%>
+    let <%= p.paramName %>: <%= p.dataType %><%= p.required ? '' : '?' %>
+<%  }) -%>
+    public var path: String {
+<%  if (hasPathParams) { -%>
+        var path = "<%= path %>"
+<%      pathParams.forEach((pathParam) => { -%>
+        path = path.stringByReplacingOccurrencesOfString("{<%= pathParam.paramName %>}", withString: "\(self.<%= pathParam.paramName %>)", options: .LiteralSearch, range: nil)
+<%      }) -%>
+        return path
+<%  } else { -%>
+        return "<%= path %>"
+<%  } -%>
+    }
+    public var parameterJSON: JSON {
+<%  if (hasBodyParam) { -%>
+<%      var param = head(hasBodyParam) -%>
+        return self.<%= param.paramName %>.toJSON()
+<%  } else { -%>
+        var params = [String: JSON]()
+<%      allParams.forEach((param) => { -%>
+<%          if (!param.isPathParam) { -%>
+<%               if (param.required) { -%>
+        params["<%= param.baseName %>"] = JSON(self.<%= param.baseName %>)
+<%               } else { -%>
+        params["<%= param.baseName %>"] = JSON(NSNull())
+<%               } -%>
+<%          } -%>
+<%      }) -%>
+        return JSON(params)
+<%  } -%>
+    }
+    public init(
+<%  allParams.forEach((param) => { -%>
+        <%= param.paramName %>: <%= param.dataType %><%= param.required ? '' : '?' %><%= param.hasMore ? ', ' : '' %>
+<%  }) -%>
+    ) {
+<%  allParams.forEach((param) => { -%>
+        self.<%= param.paramName %> = <%= param.paramName %>
+<%  }) -%>
+    }
+
+    public func send() -> Observable<<%= returnType ? returnType : 'JSON' %>> {
+<%  if (returnType) { -%>
+<%      if (typeof returnContainer !== 'undefined' && returnContainer === 'array') { -%>
+        return self.resume().map { arrayJSON in
+            return arrayJSON.array?.flatMap { try? <%= returnBaseType %>(json: $0) } ?? [<%= returnBaseType %>]()
+        }
+<%      } else { -%>
+        return self.resume().map { try <%= returnType -%>(json: $0) }
+<%      } -%>
+<%  } else { -%>
+        return self.resume()
+<%  } -%>
+    }
+}
+
+<%
+function getMethodProtocol(method) {
+  if (method == 'GET') {
+    return "GETRequestContextType"
+  }
+  if (method == 'POST') {
+    return "POSTRequestContextType"
+  }
+  if (method == 'PUT') {
+    return "PUTRequestContextType"
+  }
+  if (method == 'DELETE') {
+    return "DELETERequestContextType"
+  }
+}
+
+function getParameter(p) {
+  if (p.isRequired) {
+    return 'let ' + p.paramName + ': ' + p.dataType + '?'
+  } else {
+    return 'let ' + p.paramName + ': ' + p.dataType
+  }
+}
+
+function getArgs(p) {
+  if (p.isRequired) {
+    return p.paramName + ': ' + p.dataType + '?'
+  } else {
+    return p.paramName + ': ' + p.dataType
+  }
+}
+
+function getPath() {
+
+}
+
+-%>
