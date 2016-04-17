@@ -1,5 +1,5 @@
 //
-//  PhotoURLs_model.swift
+//  PhotoURLs.swift
 //
 //  Created by SwaggerGen
 //

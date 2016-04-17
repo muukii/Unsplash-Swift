@@ -1,5 +1,5 @@
 //
-//  CategoryLinks_model.swift
+//  CategoryLinks.swift
 //
 //  Created by SwaggerGen
 //

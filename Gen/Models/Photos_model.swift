@@ -1,5 +1,5 @@
 //
-//  Photos_model.swift
+//  Photos.swift
 //
 //  Created by SwaggerGen
 //

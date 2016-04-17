@@ -1,5 +1,5 @@
 //
-//  Me_model.swift
+//  Me.swift
 //
 //  Created by SwaggerGen
 //

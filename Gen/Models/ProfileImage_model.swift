@@ -1,5 +1,5 @@
 //
-//  ProfileImage_model.swift
+//  ProfileImage.swift
 //
 //  Created by SwaggerGen
 //

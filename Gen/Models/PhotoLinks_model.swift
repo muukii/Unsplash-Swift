@@ -1,5 +1,5 @@
 //
-//  PhotoLinks_model.swift
+//  PhotoLinks.swift
 //
 //  Created by SwaggerGen
 //

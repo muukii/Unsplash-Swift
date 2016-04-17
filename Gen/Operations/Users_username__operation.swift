@@ -1,5 +1,5 @@
 //
-//  Users_username__operation.swift
+//  Users_username_.swift
 //
 //  Created by SwaggerGen
 //
@@ -11,7 +11,7 @@ import SwiftyJSON
 import RxSwift
 import RESTRequest
 
-public struct Users_username__operationGET: RequestContextType, GETRequestContextType, ManagerRequestType, JSONResponseType {
+public struct Users_username_GET: GETRequestContextType, ManagerRequestType, JSONResponseType {
 
     let username: String
     let w: Int32?

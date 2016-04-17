@@ -1,5 +1,5 @@
 //
-//  UserLinks_model.swift
+//  UserLinks.swift
 //
 //  Created by SwaggerGen
 //

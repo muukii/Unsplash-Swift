@@ -1,5 +1,5 @@
 //
-//  Users_model.swift
+//  Users.swift
 //
 //  Created by SwaggerGen
 //

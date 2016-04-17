@@ -1,5 +1,5 @@
 //
-//  PhotosSearch_operation.swift
+//  PhotosSearch.swift
 //
 //  Created by SwaggerGen
 //
@@ -11,7 +11,7 @@ import SwiftyJSON
 import RxSwift
 import RESTRequest
 
-public struct PhotosSearch_operationGET: RequestContextType, GETRequestContextType, ManagerRequestType, JSONResponseType {
+public struct PhotosSearchGET: GETRequestContextType, ManagerRequestType, JSONResponseType {
 
     let query: String
     let category: String

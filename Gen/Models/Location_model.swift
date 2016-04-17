@@ -1,5 +1,5 @@
 //
-//  Location_model.swift
+//  Location.swift
 //
 //  Created by SwaggerGen
 //

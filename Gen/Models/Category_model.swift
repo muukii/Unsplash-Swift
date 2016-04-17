@@ -1,5 +1,5 @@
 //
-//  Category_model.swift
+//  Category.swift
 //
 //  Created by SwaggerGen
 //

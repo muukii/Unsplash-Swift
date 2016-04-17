@@ -1,5 +1,5 @@
 //
-//  Exif_model.swift
+//  Exif.swift
 //
 //  Created by SwaggerGen
 //

@@ -1,5 +1,5 @@
 //
-//  Collections_model.swift
+//  Collections.swift
 //
 //  Created by SwaggerGen
 //

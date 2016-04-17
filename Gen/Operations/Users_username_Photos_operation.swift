@@ -1,5 +1,5 @@
 //
-//  Users_username_Photos_operation.swift
+//  Users_username_Photos.swift
 //
 //  Created by SwaggerGen
 //
@@ -11,7 +11,7 @@ import SwiftyJSON
 import RxSwift
 import RESTRequest
 
-public struct Users_username_Photos_operationGET: RequestContextType, GETRequestContextType, ManagerRequestType, JSONResponseType {
+public struct Users_username_PhotosGET: GETRequestContextType, ManagerRequestType, JSONResponseType {
 
     let username: String
     let page: Int32?
