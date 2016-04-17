@@ -27,13 +27,27 @@ public struct UsersPUT: PUTRequestContextType, ManagerRequestType, JSONResponseT
     public var parameterJSON: JSON {
         var params = [String: JSON]()
         params["bio"] = JSON(self.bio)
-        params["username"] = JSON(NSNull())
-        params["first_name"] = JSON(NSNull())
-        params["last_name"] = JSON(NSNull())
-        params["email"] = JSON(NSNull())
-        params["url"] = JSON(NSNull())
-        params["location"] = JSON(NSNull())
-        params["instagram_username"] = JSON(NSNull())
+        if let value = self.username {
+            params["username"] = JSON(value)
+        }
+        if let value = self.firstName {
+            params["first_name"] = JSON(value)
+        }
+        if let value = self.lastName {
+            params["last_name"] = JSON(value)
+        }
+        if let value = self.email {
+            params["email"] = JSON(value)
+        }
+        if let value = self.url {
+            params["url"] = JSON(value)
+        }
+        if let value = self.location {
+            params["location"] = JSON(value)
+        }
+        if let value = self.instagramUsername {
+            params["instagram_username"] = JSON(value)
+        }
         return JSON(params)
     }
     public init(

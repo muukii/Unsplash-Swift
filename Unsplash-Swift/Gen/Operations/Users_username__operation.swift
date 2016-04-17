@@ -23,8 +23,12 @@ public struct Users_username_GET: GETRequestContextType, ManagerRequestType, JSO
     }
     public var parameterJSON: JSON {
         var params = [String: JSON]()
-        params["w"] = JSON(NSNull())
-        params["h"] = JSON(NSNull())
+        if let value = self.w {
+            params["w"] = JSON(value)
+        }
+        if let value = self.h {
+            params["h"] = JSON(value)
+        }
         return JSON(params)
     }
     public init(

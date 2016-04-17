@@ -24,9 +24,15 @@ public struct Users_username_LikesGET: GETRequestContextType, ManagerRequestType
     }
     public var parameterJSON: JSON {
         var params = [String: JSON]()
-        params["page"] = JSON(NSNull())
-        params["per_page"] = JSON(NSNull())
-        params["order_by"] = JSON(NSNull())
+        if let value = self.page {
+            params["page"] = JSON(value)
+        }
+        if let value = self.perPage {
+            params["per_page"] = JSON(value)
+        }
+        if let value = self.orderBy {
+            params["order_by"] = JSON(value)
+        }
         return JSON(params)
     }
     public init(
