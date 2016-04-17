@@ -38,7 +38,9 @@ public struct <%= name + httpMethod %>: <%= getMethodProtocol(httpMethod) %>, Ma
 <%               if (param.required) { -%>
         params["<%= param.baseName %>"] = JSON(self.<%= param.baseName %>)
 <%               } else { -%>
-        params["<%= param.baseName %>"] = JSON(NSNull())
+        if let value = self.<%= param.baseName %> {
+            params["<%= param.baseName %>"] = JSON(value)
+        }
 <%               } -%>
 <%          } -%>
 <%      }) -%>
